@@ -15,7 +15,7 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          doraemon
+ doraemon
         </a>
       </header>
     </div>
