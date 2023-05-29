@@ -1,25 +1,28 @@
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
+import { BrowserRouter, Routes, Route} from "react-router-dom";
 
-function App() {
+import { Pnf } from "./pages/pnf";
+import { Home } from "./pages/home";
+import { Instruction } from "./pages/instruction";
+import { Start } from "./pages/start";
+import { Train } from "./pages/train";
+import { Evaluate } from "./pages/evaluate";
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
- doraemon
-        </a>
-      </header>
+    <div className="app">
+      <BrowserRouter>
+        <ul>
+        </ul>
+        <Routes>
+          <Route activeClassName="active" path="*"element={<Pnf />}/>
+          <Route activeClassName="active" path="/"element={<Home />}/>
+          <Route activeClassName="active" path="/instruction"element={<Instruction />}/>
+          <Route activeClassName="active" path="/start"element={<Start />}/>
+          <Route activeClassName="active" path="/train"element={<Train />}/>
+          <Route activeClassName="active" path="/evaluate"element={<Evaluate />}/>
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }
-
-export default App;
