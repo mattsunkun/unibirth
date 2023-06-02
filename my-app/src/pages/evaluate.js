@@ -3,6 +3,7 @@ import React, { useState } from 'react'
 
 
 export const Evaluate = () => { 
+  //ページを変えても値を受け渡すやつ
   const search = useLocation().search;
 
   const query2 = new URLSearchParams(search);
@@ -65,6 +66,7 @@ export const UniEvaluation = () => {
   const handleTasteChange = (event) => {
     setTaste(Number(event.target.value));
   };
+  //ページを変えても値を受け渡すやつ
   const search = useLocation().search;
 
   const query2 = new URLSearchParams(search);
@@ -83,7 +85,8 @@ export const UniEvaluation = () => {
   }
 
   return (
-    <div className='priceEvaluate'>
+    <div className='priceEvaluate'
+     style={{backgroundImage: `${process.env.PUBLIC_URL}/evaluate/dummy.png`} }>
       <h1>育てたウニの評価は？</h1>
       <label>
         美しさ：
@@ -115,10 +118,10 @@ export const UniEvaluation = () => {
       <br/>
       <NavLink to="/start">ホームに戻る</NavLink>
       
+      //ボタン
       <img src={`${process.env.PUBLIC_URL}/ozo-uni.PNG`} onClick={handleClick1} id="hai" />
       <img src={`${process.env.PUBLIC_URL}/ozo-uni.PNG`} onClick={handleClick2} id="hai" />
     </div>
   );
 };
 
-// export default UniEvaluation
