@@ -17,7 +17,6 @@ export default function App() {
         <Routes>
           <Route activeClassName="active" path="*"element={<Pnf />}/>
           <Route activeClassName="active" path="/"element={<Start />}/>
-        
           <Route activeClassName="active" path="/start"element={<Start />}/>
           <Route activeClassName="active" path="/train"element={<Train />}/>
           <Route activeClassName="active" path="/evaluate"element={<UniEvaluation />}/>
