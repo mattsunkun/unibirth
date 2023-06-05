@@ -4,6 +4,9 @@ import React, { useState } from 'react';
 
 
 
+
+
+
 export const Train = () => {
   //ページを変えても値を受け渡すやつ
   const search = useLocation().search;
@@ -55,7 +58,7 @@ export const Train = () => {
   };
 
   const handleBeautyChange = (event) => {
-    setBeauty(Number(event.target.value));
+    setBeauty(Number(event.target.value) );
   };
 
   const handleAgilityChange = (event) => {
@@ -72,54 +75,59 @@ export const Train = () => {
 
   
   
-
+//所持金
   let haveMoney = () => {
       haveMoney = Number(Number(query2.get('money')) + 1000)
       return haveMoney
   }
   
   
+
+
  //背景画像指定
  const backImagePath = `${process.env.PUBLIC_URL}/buying.PNG`
 
+
+ 
  //表示するところ
   return (
     <div className="train"
      style = {
-      { backgroundImage: `url(${backImagePath})`,backgroundRepeat: "no-repeat" ,backgroundSize: contain, paddingTop: 120}
+      { backgroundImage: `url(${backImagePath})`,backgroundRepeat: "no-repeat" ,paddingTop: 30}
       
      }>
+      <div style = {{fontSize: 30, backgroundColor: "white", display: "inline-block", paddingTop: 10, paddingBottom:10}}>所持金:  {haveMoney()} 円</div>
 
       <h1> ウニを育成しよう</h1>
-      <div>持っているお金:  {haveMoney()} 円</div>
-      <img src={`${process.env.PUBLIC_URL}/ozo-uni.PNG`} onClick={handleClick} id="hai" width="100"/>
-      <h2 style = {{fontSize: 40, color: '#FF570D', paddingLeft: 30}}>えさ</h2>
-      <label>
+      
+      <h2 style = {{fontSize: 40, color: '#FF570D', paddingLeft: 30, paddingBottom: 2 }}>エサ</h2>
+      <label style = {{fontSize: 30}}>
         キャベツ：
         <input type="number" value={beauty} onChange={handleBeautyChange} />
       </label>
       <br />
-      <label>
+      <label style = {{fontSize: 30}}>
         トマト：
         <input type="number" value={agility} onChange={handleAgilityChange} />
       </label>
       <br />
-      <label>
+      <label style = {{fontSize: 30}}>
         スイカ：
         <input type="number" value={size} onChange={handleSizeChange} />
       </label>
       <br />
-      <label>
-        美味しさ：
+      <label　style = {{fontSize: 30}}>
+        昆布：
         <input type="number" value={taste} onChange={handleTasteChange} />
       </label>
       <br />
+      <img src={`${process.env.PUBLIC_URL}/ozo-uni.PNG`} onClick={handleClick} id="hai" width="100"/>
       <p>ウニの評価金額は {evaluateUni()} 円です。</p>
       
 
 
 
-      
+    
     </div>
   )
 };
