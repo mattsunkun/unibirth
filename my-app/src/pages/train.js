@@ -26,7 +26,7 @@ export const Train = () => {
 
   //持ってるお金を定義
   let haveMoney = () => {
-      haveMoney = Number(query2.get('money') + 1000)
+      haveMoney = Number(Number(query2.get('money')) + 1000)
       return haveMoney
   }
   
@@ -34,7 +34,7 @@ export const Train = () => {
 
  //表示するところ
   return (
-      <div className="train">
+    <div className="train">
       <img src={`${process.env.PUBLIC_URL}/train/dummy.png`} alt="train"/>
      
       <h1>育成</h1>
