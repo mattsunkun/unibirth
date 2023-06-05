@@ -86,29 +86,26 @@ export const Train = () => {
   return (
     <div className="train"
      style = {
-      { backgroundImage: `url(${backImagePath})` }
+      { backgroundImage: `url(${backImagePath})`,backgroundRepeat: "no-repeat" ,backgroundSize: contain, paddingTop: 120}
+      
      }>
-   
-     
-
-    
 
       <h1> ウニを育成しよう</h1>
       <div>持っているお金:  {haveMoney()} 円</div>
       <img src={`${process.env.PUBLIC_URL}/ozo-uni.PNG`} onClick={handleClick} id="hai" width="100"/>
-      <h2>ウニ評価</h2>
+      <h2 style = {{fontSize: 40, color: '#FF570D', paddingLeft: 30}}>えさ</h2>
       <label>
-        美しさ：
+        キャベツ：
         <input type="number" value={beauty} onChange={handleBeautyChange} />
       </label>
       <br />
       <label>
-        素早さ：
+        トマト：
         <input type="number" value={agility} onChange={handleAgilityChange} />
       </label>
       <br />
       <label>
-        大きさ：
+        スイカ：
         <input type="number" value={size} onChange={handleSizeChange} />
       </label>
       <br />
