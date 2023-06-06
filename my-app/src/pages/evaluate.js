@@ -1,9 +1,10 @@
 import {NavLink,Rocation,useParams,useLocation} from "react-router-dom";
 import React, { useState, useEffect} from 'react' 
-
+import useSound from 'use-sound';
 
 export const UniEvaluation = () => {
-
+//bgm設定
+  const [playBgm,{pause}] = useSound(`${process.env.PUBLIC_URL}/MusMus-BGM-033.mp3`)
   //ページを変えても値を受け渡すやつ
   const search = useLocation().search;
 
@@ -17,7 +18,10 @@ export const UniEvaluation = () => {
       agility: 3,
       taste: 3,
       beauty: 3,
-      image: `${process.env.PUBLIC_URL}/murasaki-uni.PNG`
+      image: `${process.env.PUBLIC_URL}/murasaki-uni.PNG` ,
+      instruction: `${process.env.PUBLIC_URL}/murasaki-uni_info.png` ,
+      
+
     },
     {
       type: '赤ウニ',
@@ -25,7 +29,9 @@ export const UniEvaluation = () => {
       agility: 2,
       taste: 4,
       beauty: 4,
-      image: `${process.env.PUBLIC_URL}/aka-uni.PNG`
+      image: `${process.env.PUBLIC_URL}/aka-uni.PNG` ,
+      instruction: `${process.env.PUBLIC_URL}/aka-uni_info.png` ,
+      
     },
     {
       type: '北紫ウニ',
@@ -33,7 +39,9 @@ export const UniEvaluation = () => {
       agility: 3,
       taste: 2,
       beauty: 4,
-      image: `${process.env.PUBLIC_URL}/kitamurasaki-uni.PNG`
+      image: `${process.env.PUBLIC_URL}/kitamurasaki-uni.PNG` ,
+      instruction: `${process.env.PUBLIC_URL}/kitamurasaki-uni_info.png` ,
+      
     },
     {
       type: '馬糞ウニ',
@@ -41,7 +49,9 @@ export const UniEvaluation = () => {
       agility: 2,
       taste: 4,
       beauty: 4,
-      image: `${process.env.PUBLIC_URL}/bafun-uni.PNG`
+      image: `${process.env.PUBLIC_URL}/bafun-uni.PNG` ,
+      instruction: `${process.env.PUBLIC_URL}/bafun-uni_info.png` ,
+      
     },
     {
       type: '蝦夷馬糞ウニ',
@@ -49,7 +59,9 @@ export const UniEvaluation = () => {
       agility: 1,
       taste: 5,
       beauty: 5,
-      image: `${process.env.PUBLIC_URL}/ezobafun-uni.PNG`
+      image: `${process.env.PUBLIC_URL}/ezobafun-uni.PNG` ,
+      instruction: `${process.env.PUBLIC_URL}/ezobafun-uni_info.png` ,
+      
     },
     {
       type: 'チリウニ',
@@ -57,7 +69,9 @@ export const UniEvaluation = () => {
       agility: 5,
       taste: 2,
       beauty: 2,
-      image: `${process.env.PUBLIC_URL}/chile-uni.PNG`
+      image: `${process.env.PUBLIC_URL}/chile-uni.PNG` ,
+      instruction: `${process.env.PUBLIC_URL}/chile-uni.png` ,
+      
     },
     {
       type: 'ガンガゼ',
@@ -65,7 +79,9 @@ export const UniEvaluation = () => {
       agility: 5,
       taste: 0,
       beauty: 1,
-      image: `${process.env.PUBLIC_URL}/gangaze(1).PNG`
+      image: `${process.env.PUBLIC_URL}/gangaze(1).PNG` ,
+      instruction: `${process.env.PUBLIC_URL}/gangaze_info.png` ,
+      
     },
     {
       type: 'おぞうに',
@@ -73,7 +89,9 @@ export const UniEvaluation = () => {
       agility: 0,
       taste: 5,
       beauty: 5,
-      image: `${process.env.PUBLIC_URL}/ozo-uni.PNG`
+      image: `${process.env.PUBLIC_URL}/ozo-uni.PNG` ,
+      instruction: `${process.env.PUBLIC_URL}/ozo-uni_info.png` ,
+      
     },
     {
       type: 'かがみもちうに',
@@ -81,7 +99,9 @@ export const UniEvaluation = () => {
       agility: 5,
       taste: 1,
       beauty: 2,
-      image: `${process.env.PUBLIC_URL}/wani.PNG`
+      image: `${process.env.PUBLIC_URL}/wani.PNG` ,
+      instruction: `${process.env.PUBLIC_URL}/kagamimpchi-uni_info.png` ,
+      
     },
     {
       type: 'ワニ',
@@ -89,7 +109,8 @@ export const UniEvaluation = () => {
       agility: 5000,
       taste: 0,
       beauty: 0,
-      image: `${process.env.PUBLIC_URL}/ezobafun-uni.PNG`
+      image: `${process.env.PUBLIC_URL}/ezobafun-uni.PNG` ,
+      instruction:`${process.env.PUBLIC_URL}/wani_info.png.` ,
     }
   ];
 
@@ -157,38 +178,50 @@ export const UniEvaluation = () => {
     window.location.href = uri;
   }
   
+  let uniInstruction = null
   let uniImage = null
+
   if (grownUni) {
     switch (grownUni.type) {
       case '紫ウニ':
         uniImage = grownUni.image;
+        uniInstruction = grownUni.instruction;
         break;
       case '赤ウニ':
         uniImage = grownUni.image;
+        uniInstruction = grownUni.instruction;
         break;
       case '蝦夷馬糞ウニ':
         uniImage = grownUni.image;
+        uniInstruction = grownUni.instruction;
         break;
       case 'チリウニ':
         uniImage = grownUni.image;
+        uniInstruction = grownUni.instruction;
         break;
       case '北紫ウニ':
         uniImage = grownUni.image;
+        uniInstruction = grownUni.instruction;
         break;
       case 'ガンガゼ':
         uniImage = grownUni.image;
+        uniInstruction = grownUni.instruction;
         break;
       case 'おぞうに':
         uniImage = grownUni.image;
+        uniInstruction = grownUni.instruction;
         break;
       case 'かがみもちうに':
         uniImage = grownUni.image;
+        uniInstruction = grownUni.instruction;
         break;
       case 'ワニ':
         uniImage = grownUni.image;
+        uniInstruction = grownUni.instruction;
         break;           
       default:
         uniImage = '';
+        uniInstruction = '';
         break;
     }
   }
@@ -201,15 +234,67 @@ export const UniEvaluation = () => {
       { backgroundImage: `url(${backImagePath})` }
     }>
       <h1 style={{ color: 'black', fontSize: 40 }}>育てたウニの評価は？</h1>
+      
+      {/* ↓ステータス表示する枠  */}
+      
+      <div style={{ 
+          backgroundColor: "white" ,
+          height: "10%" ,
+          width: "500px" ,
+          borderStyle: "solid" ,
+          borderWidth: 'bold' ,
+          borderColor: 'black', 
+          position: 'relative' ,
+        }}>
+
+        {/* ↓レーダーチャート */}
+
+          <div 
+            style={{backgroundImage: "url(/evaluate-reader_back.png)" ,
+            backgroundColor: "white" ,
+            display: "table" ,
+            height: "300px" ,
+            width: "400px" ,
+            position: "relative" ,
+            backgroundPosition: "center" ,
+            backgroundRepeat: "no-repeat" ,
+            backgroundSize: "contain" ,
+          }}
+          >
+            <div style={{
+
+             
+              display: "table-cell" ,
+	            verticalAlign: "middle" ,
+            margin: "auto 0 auto 90px" ,
+            position: "absolute" ,	/*top,bottomが0の時左右の中央揃えになります*/
+	          top: "0" ,
+	          bottom: "0" ,
+            width: "216px" ,
+            height: "216px" ,
+            clipPath: "polygon(10% 50%, 50% 0%, 100% 50%, 50% 100%)" ,
+            background: "rgba(3, 169, 244, 0.4)" ,
+            }}
+             ></div>
+          </div>
+          
       <p>美しさ: {query2.get('beauty')}</p>
       <p>素早さ: {query2.get('agility')}</p>
       <p>大きさ: {query2.get('size')}</p>
       <p>美味しさ: {query2.get('taste')}</p>
+        </div>
+        
+
 
       <img src={ uniImage } alt="" width="150"/>
+      <img src={ uniInstruction }  width="300"/>
       <p>ウニの評価金額は {Uniprice()} 円</p>
       <p>所持金 {UnitotalPrice} 円</p>=
       <br/>   
+      {/*bgm再生 */}
+      <img src={`${process.env.PUBLIC_URL}/Sound (1).png`} alt="" width="50" onClick={() => playBgm()} id="hai" />
+      <img src={`${process.env.PUBLIC_URL}/SoundStop.png`} alt="" width="50" onClick={() => pause()} id="hai" />
+      <br/>
       <img src={`${process.env.PUBLIC_URL}/start.png`} alt="" width="100" onClick={handleClick1} id="hai" /> 
       <img src={`${process.env.PUBLIC_URL}/continue.png`} alt="" width="100" onClick={handleClick2} id="hai" />
       <br/>
