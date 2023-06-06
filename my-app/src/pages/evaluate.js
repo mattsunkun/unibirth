@@ -231,27 +231,34 @@ export const UniEvaluation = () => {
   return (
     <div className='priceEvaluate'
      style={
-      { backgroundImage: `url(${backImagePath})` }
+      { backgroundImage: `url(${backImagePath})` ,
+      backgroundRepeat: "no-repaet" ,
+      backgroundSize: "contain"  ,
+      padding: "5px"}
     }>
-      <h1 style={{ color: 'black', fontSize: 40 }}>育てたウニの評価は？</h1>
+      
       
       {/* ↓ステータス表示する枠  */}
       
       <div style={{ 
           backgroundColor: "white" ,
+          margin: "0 0 0 auto" ,
           height: "10%" ,
           width: "500px" ,
           borderStyle: "solid" ,
+          boderRadius: "12px" ,
           borderWidth: 'bold' ,
           borderColor: 'black', 
           position: 'relative' ,
+          padding: "20px 0 0 100px" ,
         }}>
-
+        <h1 style={{ color: 'black', fontSize: 40 }}>育てたウニの評価は？</h1>
         {/* ↓レーダーチャート */}
 
           <div 
             style={{backgroundImage: "url(/evaluate-reader_back.png)" ,
             backgroundColor: "white" ,
+
             display: "table" ,
             height: "300px" ,
             width: "400px" ,
@@ -286,8 +293,8 @@ export const UniEvaluation = () => {
         
 
 
-      <img src={ uniImage } alt="" width="150"/>
-      <img src={ uniInstruction }  width="300"/>
+      <img src={ uniImage } alt="" width="300"/>
+      <img src={ uniInstruction }  width="500"/>
       <p>ウニの評価金額は {Uniprice()} 円</p>
       <p>所持金 {UnitotalPrice} 円</p>=
       <br/>   

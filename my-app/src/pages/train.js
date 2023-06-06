@@ -26,9 +26,9 @@ export const Train = () => {
 
   //持ってるお金を定義
   let haveMoney = () => {
-      haveMoney = Number(query2.get('money') + 1000)
-      return haveMoney
-  }
+    haveMoney = Number(Number(query2.get('money')) + 1000)
+    return haveMoney
+}
   
   
 
