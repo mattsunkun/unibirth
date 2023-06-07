@@ -235,7 +235,7 @@ export const UniEvaluation = () => {
     }
   }
     //背景画像指定
-    const backImagePath = `${process.env.PUBLIC_URL}/evaluateBackGround.PNG`
+    const backImagePath = `${process.env.PUBLIC_URL}/auction.jpg`
 
     //bgm設定
     const [playBgm,{pause}] = useSound(`${process.env.PUBLIC_URL}/MusMus-BGM-033.mp3`)
@@ -248,8 +248,11 @@ export const UniEvaluation = () => {
     <div className='priceEvaluate'
          style={
         { backgroundImage: `url(${backImagePath})`,
-          backgroundSize: "contain" ,
-          backgroundRepeat: 'no-repeat'}
+        backgroundPosition: "center" ,
+          backgroundSize: "cover" ,
+          backgroundRepeat: 'no-repeat' ,
+          width: "100%" ,
+          height: "100%" ,}
          }>
       
         {/* 評価 */}
