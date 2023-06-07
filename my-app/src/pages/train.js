@@ -240,15 +240,17 @@ let uri;
   };
  //背景画像指定
  const backImagePath = `${process.env.PUBLIC_URL}/buying.PNG`
- //アイテムメニュー
+ 
+
+
  //表示するところ
   return (
     <div className="train"
      style = {
       { backgroundImage: `url(${backImagePath})`,backgroundRepeat: "no-repeat" ,paddingTop: 30}
      }>
-      <img src={`${process.env.PUBLIC_URL}/items4.PNG`} width="100"/>
       <div id="money" style = {{fontSize: 30, backgroundColor: "white", display: "inline-block", paddingTop: 10, paddingBottom:10}}>所持金:  {haveMoney} 円</div>
+      <img src={`${process.env.PUBLIC_URL}/items4.PNG`} width="350" style = {{paddingLeft: 320, paddingBottom:30, display: "flex"}}/>
       <h1> ウニを育成しよう</h1>
       <h2 style = {{fontSize: 40, color: '#FF570D', paddingLeft: 30, paddingBottom: 2 }}>エサ</h2>
       <label style = {{fontSize: 30}}>
