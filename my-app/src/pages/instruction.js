@@ -1,11 +1,18 @@
 import {NavLink} from "react-router-dom";
-
 export const Instruction = () => {
+  const handleClick1 = () => {
+    window.location.href = "/start";
+  }
+  //背景画像指定
+  const backImagePath = `${process.env.PUBLIC_URL}/torisetuBack.png`
   return (
-    <div className="instruction">
-      <img src={`${process.env.PUBLIC_URL}/instruction/dummy.png`} alt="instruction"/>
-      <NavLink to="/start">開始</NavLink>
-      <h1>説明</h1>
+    <div className="instruction"
+    style={
+      { backgroundImage: `url(${backImagePath})`,
+        backgroundRepeat: 'no-repeat',}
+    }
+    >
+      <img src={`${process.env.PUBLIC_URL}/backBotton.png`} alt="instruction" onClick={handleClick1}/>
     </div>
   );
 };

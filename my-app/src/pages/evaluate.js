@@ -258,11 +258,7 @@ export const UniEvaluation = () => {
          }>
           <div style={{
             margin: "0px 0 0 60%" ,
-            backgroundColor: "white" ,
-            borderStyle: "solid" ,
-            borderRadius: "8px" ,
-            borderWidth: 'bold' ,
-            borderColor: 'black', 
+            backgroundColor: "white" ,borderStyle: "solid" ,borderRadius: "8px" ,borderWidth: 'bold' ,borderColor: 'black', 
             padding: "10px" ,
             }}>
             <h1 style={{ color: 'black',  }}>あなたが育てたウニは・・・</h1>
@@ -273,23 +269,22 @@ export const UniEvaluation = () => {
       
         
      
-      {/*ウニの画像貼り付ける */}
+      {/*ウニの画像 */}
        <img src={ uniImage } alt="" width="150"/>
        <img src={ uniInstruction }  width="300"/>
        {/* 所持金 */}
-      <div style={{margin: "15px 140px 0 0" , float: "right" ,
-      backgroundColor: "white" ,borderStyle: "solid" ,borderRadius: "8px" ,borderWidth: 'bold' ,borderColor: 'black', }}><p style={{ color: 'black', fontSize: 40 }}>所持金 {UnitotalPrice} 円</p></div>
+      <div style={{margin: "15px 140px 0 0" , float: "right" ,backgroundColor: "white" ,borderStyle: "solid" ,borderRadius: "8px" ,borderWidth: 'bold' ,borderColor: 'black', }}>
+        <p style={{ color: 'black', fontSize: 40 }}>所持金 {UnitotalPrice} 円</p>
+        </div>
      
       
         
       
 
       
-         
-      <div style={{
-        margin: "0 auto 0 70%" ,
-      }}>
-        {/*bgm再生 */}
+      {/* 画面右下に表示するボタンたち */}
+      <div style={{margin: "0 auto 0 70%" ,}}>
+        {/*bgm再生・停止ボタン */}
       <img src={`${process.env.PUBLIC_URL}/Sound (1).png`} alt="" width="50" onClick={() => playBgm()} id="hai" />
       <img src={`${process.env.PUBLIC_URL}/SoundStop.png`} alt="" width="50" onClick={() => pause()} id="hai" />
       {/*画像をボタンにした 効果音も追加したよ～*/}
