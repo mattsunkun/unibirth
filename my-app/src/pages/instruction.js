@@ -9,10 +9,15 @@ export const Instruction = () => {
     <div className="instruction"
     style={
       { backgroundImage: `url(${backImagePath})`,
-        backgroundRepeat: 'no-repeat',}
+        backgroundRepeat: 'no-repeat',
+        height: '1020px',
+        width: '1440px'
+        }
     }
     >
       <img src={`${process.env.PUBLIC_URL}/backBotton.png`} alt="instruction" onClick={handleClick1}/>
+      <h1> </h1>
+      <p></p>
     </div>
   );
 };
