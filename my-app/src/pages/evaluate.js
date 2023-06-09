@@ -245,14 +245,16 @@ export const UniEvaluation = () => {
 
     //↓表示されるところ
   return (
+    
 <div  className='priceEvaluate'
       style={
         { backgroundImage: `url(${backImagePath})`,
         backgroundPosition: "center" ,
         backgroundSize: "cover" ,
         backgroundRepeat: 'no-repeat' ,
-        width: "" ,
-        height: "" ,}
+        width: "100%" ,
+        height: "" ,
+        float: "" ,}
 }>
 
   {/* ⓵ウニの画像・説明 */}
@@ -263,7 +265,7 @@ export const UniEvaluation = () => {
   </div>
 
   {/* ⓶評価・所持金 */}
-  <div style={{float: "right", padding: "10px" , backgroundColor: ""}}>
+  <div style={{float: "right", padding: "10px" , backgroundColor: "red", marginBottom: "30px"}}>
     {/* 評価の枠 */}
     <div style={{display: "flex"}}>
       <div style={
@@ -285,7 +287,7 @@ export const UniEvaluation = () => {
     
       
   {/* ⓷画面右下に表示するボタンたち */}
-  <div style={{float: "" , margin: "0 0 0 70%" ,backgroundColor: "",fontSize: "",}}>
+  <div style={{float: "" , margin: "0 0 0 70%" ,backgroundColor: "green",fontSize: "",}}>
     {/*bgm再生・停止ボタン */}
     <img src={`${process.env.PUBLIC_URL}/Sound (1).png`} alt="" width="50" onClick={() => playBgm()} id="hai" />
     <img src={`${process.env.PUBLIC_URL}/SoundStop.png`} alt="" width="50" onClick={() => pause()} id="hai" />
@@ -295,5 +297,7 @@ export const UniEvaluation = () => {
   </div>
 
 </div>
+    
+
   );
 }
