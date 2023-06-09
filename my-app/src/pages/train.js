@@ -217,7 +217,8 @@ let uri;
  
 
 
-
+const intImageSize = 60;
+const intBottonSize = 80;
 
  //表示するところ
   return (
@@ -225,65 +226,77 @@ let uri;
      style = {
       { backgroundImage: `url(${backImagePath})`,backgroundRepeat: "no-repeat" ,paddingTop: 30}
      }>
-      <div id="money" style = {{fontSize: 30, backgroundColor: "white", display: "inline-block", paddingTop: 10, paddingBottom:10}}>所持金:  {haveMoney} 円</div>
-      <h1 style={{flexDirection: "column"}}> ウニを育成しよう</h1>
-      <img src={`${process.env.PUBLIC_URL}/items4.PNG`} width="350" style = {{paddingLeft: 320, paddingBottom:30, flexDirection: "ro  w"}}/>
+
+<div style={{float: "right"}}>
+      <img src={`${process.env.PUBLIC_URL}/items6.png`} width="350" style = {{ paddingBottom:30, flexDirection: "row"}}/>
+      </div>
+ 
+      <div  style={{float: "left"}}>
+      <div>
+        <div id="money" style = {{fontSize: 50, display: "inline-block", paddingTop: "", paddingBottom:"", color:"black"}}>所持金:  {haveMoney} 円</div>
+      <h1 style={{flexDirection: "column", color:"black"}}> ウニを育成しよう</h1>
+      <h2 style = {{fontSize: 40, color: '#FF570D', paddingLeft: "", paddingBottom: "", }}>エサ</h2>
       
-      <h2 style = {{fontSize: 40, color: '#FF570D', paddingLeft: 30, paddingBottom: 2 }}>エサ</h2>
+      <div style={{width: "" , display: "", alignContent:"stretch"}}>
+      
       キャベツ：
       <label style = {{fontSize: 30, display: "flex"}}>
-        <img src={`${process.env.PUBLIC_URL}/cabbage.PNG`} width="100" />
+        <img src={`${process.env.PUBLIC_URL}/cabbage.PNG`} width={intImageSize} height={intImageSize} />
         <div id={dictFood.cabbageNamePriceAmount[0]} style={{fontSize: 50, paddingLeft: 20}} >0</div>
-        <img src={`${process.env.PUBLIC_URL}/minus-removebg-preview (1).png`} onClick={() =>buyIt(dictFood.cabbageNamePriceAmount, -1)} width="200" />
-        <img src={`${process.env.PUBLIC_URL}/plus-removebg-preview (1).png`} onClick={() => buyIt(dictFood.cabbageNamePriceAmount, 1)} width="200"/>
+        <img src={`${process.env.PUBLIC_URL}/minus-removebg-preview (1).png`} onClick={() =>buyIt(dictFood.cabbageNamePriceAmount, -1)}  height = {intBottonSize}/>
+        <img src={`${process.env.PUBLIC_URL}/plus-removebg-preview (1).png`} onClick={() => buyIt(dictFood.cabbageNamePriceAmount, 1)} height = {intBottonSize}/>
       </label>
       <br />
       トマト：
       <label style = {{fontSize: 30,display: "flex"}}>
-        <img src={`${process.env.PUBLIC_URL}/tomato.PNG`} width="100"/>
+        <img src={`${process.env.PUBLIC_URL}/tomato.PNG`} width={intImageSize} height={intImageSize}/>
         <div id={dictFood.tomatoNamePriceAmount[0]} style={{fontSize: 50, paddingLeft: 20}}>0</div>
-        <img src={`${process.env.PUBLIC_URL}/minus-removebg-preview (1).png`} onClick={() =>buyIt(dictFood.tomatoNamePriceAmount, -1)} width="200"/>
-        <img src={`${process.env.PUBLIC_URL}/plus-removebg-preview (1).png`} onClick={() =>buyIt(dictFood.tomatoNamePriceAmount, 1)} width="200"/>
+        <img src={`${process.env.PUBLIC_URL}/minus-removebg-preview (1).png`} onClick={() =>buyIt(dictFood.tomatoNamePriceAmount, -1)}  height = {intBottonSize}/>
+        <img src={`${process.env.PUBLIC_URL}/plus-removebg-preview (1).png`} onClick={() =>buyIt(dictFood.tomatoNamePriceAmount, 1)}  height = {intBottonSize}/>
       </label>
       <br />
       スイカ：
       <label style = {{fontSize: 30,display: "flex"}}>
-        <img src={`${process.env.PUBLIC_URL}/watermelon.PNG`} width="100"/>
+        <img src={`${process.env.PUBLIC_URL}/watermelon.PNG`} width={intImageSize} height={intImageSize}/>
         <div id={dictFood.waterMelonNamePriceAmount[0]} style={{fontSize: 50, paddingLeft: 20}}>0</div>
-        <img src={`${process.env.PUBLIC_URL}/minus-removebg-preview (1).png`} onClick={() =>buyIt(dictFood.waterMelonNamePriceAmount, -1)} width="200"/>
-        <img src={`${process.env.PUBLIC_URL}/plus-removebg-preview (1).png`} onClick={() =>buyIt(dictFood.waterMelonNamePriceAmount, 1)} width="200"/>
+        <img src={`${process.env.PUBLIC_URL}/minus-removebg-preview (1).png`} onClick={() =>buyIt(dictFood.waterMelonNamePriceAmount, -1)}  height = {intBottonSize}/>
+        <img src={`${process.env.PUBLIC_URL}/plus-removebg-preview (1).png`} onClick={() =>buyIt(dictFood.waterMelonNamePriceAmount, 1)}  height = {intBottonSize}/>
       </label>
       <br />
       昆布：
       <label style = {{fontSize: 30,display: "flex"}}>
-        <img src={`${process.env.PUBLIC_URL}/kombu.PNG`} width="100"/>
+        <img src={`${process.env.PUBLIC_URL}/kombu.PNG`} width={intImageSize} height={intImageSize}/>
         <div id={dictFood.seaWeedNamePriceAmount[0]} style={{fontSize: 50, paddingLeft: 20}}>0</div>
-        <img src={`${process.env.PUBLIC_URL}/minus-removebg-preview (1).png`} onClick={() =>buyIt(dictFood.seaWeedNamePriceAmount, -1)} width="200"/>
-        <img src={`${process.env.PUBLIC_URL}/plus-removebg-preview (1).png`} onClick={() =>buyIt(dictFood.seaWeedNamePriceAmount, 1)} width="200"/>
+        <img src={`${process.env.PUBLIC_URL}/minus-removebg-preview (1).png`} onClick={() =>buyIt(dictFood.seaWeedNamePriceAmount, -1)}height = {intBottonSize}/>
+        <img src={`${process.env.PUBLIC_URL}/plus-removebg-preview (1).png`} onClick={() =>buyIt(dictFood.seaWeedNamePriceAmount, 1)}  height = {intBottonSize}/>
       </label>
       <br />
       
       米：
       <label style = {{fontSize: 30,display: "flex"}}>
-        <img src={`${process.env.PUBLIC_URL}/kome.PNG`} width="100"/>
+        <img src={`${process.env.PUBLIC_URL}/kome.PNG`} width={intImageSize} height={intImageSize}/>
         <div id={dictFood.riceNamePriceAmount[0]} style={{fontSize: 50, paddingLeft: 20}}>0</div>
-        <img src={`${process.env.PUBLIC_URL}/minus-removebg-preview (1).png`} onClick={() =>buyIt(dictFood.riceNamePriceAmount, -1)} width="200"/>
-        <img src={`${process.env.PUBLIC_URL}/plus-removebg-preview (1).png`} onClick={() =>buyIt(dictFood.riceNamePriceAmount, 1)} width="200"/>
+        <img src={`${process.env.PUBLIC_URL}/minus-removebg-preview (1).png`} onClick={() =>buyIt(dictFood.riceNamePriceAmount, -1)} height = {intBottonSize}/>
+        <img src={`${process.env.PUBLIC_URL}/plus-removebg-preview (1).png`} onClick={() =>buyIt(dictFood.riceNamePriceAmount, 1)}  height = {intBottonSize}/>
       </label>
       <br />
       ガリガリ君：
       <label style = {{fontSize: 30,display: "flex"}}>
-        <img src={`${process.env.PUBLIC_URL}/garigarikun.PNG`} width="100"/>
+        <img src={`${process.env.PUBLIC_URL}/garigarikun.PNG`} width={intImageSize} height={intImageSize}/>
         <div id={dictFood.garigariNamePriceAmount[0]} style={{fontSize: 50, paddingLeft: 20}}>0</div>
-        <img src={`${process.env.PUBLIC_URL}/minus-removebg-preview (1).png`} onClick={() =>buyIt(dictFood.garigariNamePriceAmount, -1)} width="200"/>
-        <img src={`${process.env.PUBLIC_URL}/plus-removebg-preview (1).png`} onClick={() =>buyIt(dictFood.garigariNamePriceAmount, 1)} width="200"/>
+        <img src={`${process.env.PUBLIC_URL}/minus-removebg-preview (1).png`} onClick={() =>buyIt(dictFood.garigariNamePriceAmount, -1)} height = {intBottonSize}/>
+        <img src={`${process.env.PUBLIC_URL}/plus-removebg-preview (1).png`} onClick={() =>buyIt(dictFood.garigariNamePriceAmount, 1)} height = {intBottonSize}/>
       </label>
+      </div>
+      
       <br />
 
       <img src={`${process.env.PUBLIC_URL}/IMG_0204.PNG`} onClick={handleClick} id="hai" width="300"/>
-      <p>ウニの評価金額は {evaluateUni()} 円です。</p>
+      </div>
       
       
+      
+      </div>
     </div>
   );
 };
