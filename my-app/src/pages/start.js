@@ -35,18 +35,9 @@ export const Start = () => {
       <br/>
       <div style={{margin:'35% 0 38% 38%',
              }}>
-        <img src={`${process.env.PUBLIC_URL}/start.PNG`} onClick={handleClick1} id="hai" width="350px" />
+        <img src={`${process.env.PUBLIC_URL}/start.png`} onClick={handleClick1} id="hai" width="350px" />
       </div>
 
     </div>
   );
 };
-
-
-
-
-
-
-
-
-
