@@ -9,9 +9,11 @@ export const Instruction = () => {
     <div className="instruction"
     style={
       { backgroundImage: `url(${backImagePath})`,
+        backgroundPosition: "center" ,
+        height:'900px',
+        width:'',
+        backgroundSize: 'cover',
         backgroundRepeat: 'no-repeat',
-        height: '1020px',
-        width: '1440px'
         }
     }
     >
