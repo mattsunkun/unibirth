@@ -112,7 +112,7 @@ export const UniEvaluation = () => {
       taste: 0,
       beauty: 0,
       image: `${process.env.PUBLIC_URL}/wani.PNG`,
-      instruction:`${process.env.PUBLIC_URL}/wani_info.png.`,
+      instruction:`${process.env.PUBLIC_URL}/wani_info.png`,
       chart: `${process.env.PUBLIC_URL}/evaluate-chart-wani.png`
     }
   ];
@@ -245,57 +245,55 @@ export const UniEvaluation = () => {
 
     //↓表示されるところ
   return (
-    <div className='priceEvaluate'
-         style={
+<div  className='priceEvaluate'
+      style={
         { backgroundImage: `url(${backImagePath})`,
         backgroundPosition: "center" ,
-          backgroundSize: "cover" ,
-          backgroundRepeat: 'no-repeat' ,
-          width: "100%" ,
-          height: "100%" ,}
-         }>
-      
-        {/* 評価 */}
-        <div style={
-          {display: "flex"}
-         }>
-          <div style={{
-            margin: "0px 0 0 60%" ,
-            backgroundColor: "white" ,borderStyle: "solid" ,borderRadius: "8px" ,borderWidth: 'bold' ,borderColor: 'black', 
-            padding: "10px" ,
-            }}>
-            <h1 style={{ color: 'black',  }}>あなたが育てたウニは・・・</h1>
-            <img src={ uniChart }  width="350" style={{margin: "0 0 0 8%"}} />
-            <h1 style={{ color: 'black', fontSize: 30,margin: "0 0 0 120px",}}><span style={{color: "red", fontSize: 50 ,}} >{Uniprice()}</span>円</h1>
-          </div>
-        </div>
-      
-        
-     
-      {/*ウニの画像 */}
-       <img src={ uniImage } alt="" width="150"/>
-       <img src={ uniInstruction }  width="300"/>
-       {/* 所持金 */}
-      <div style={{margin: "15px 140px 0 0" , float: "right" ,backgroundColor: "white" ,borderStyle: "solid" ,borderRadius: "8px" ,borderWidth: 'bold' ,borderColor: 'black', }}>
-        <p style={{ color: 'black', fontSize: 40 }}>所持金 {UnitotalPrice} 円</p>
-        </div>
-     
-      
-        
-      
+        backgroundSize: "cover" ,
+        backgroundRepeat: 'no-repeat' ,
+        width: "" ,
+        height: "" ,}
+}>
 
-      
-      {/* 画面右下に表示するボタンたち */}
-      <div style={{margin: "0 auto 0 70%" ,}}>
-        {/*bgm再生・停止ボタン */}
-      <img src={`${process.env.PUBLIC_URL}/Sound (1).png`} alt="" width="50" onClick={() => playBgm()} id="hai" />
-      <img src={`${process.env.PUBLIC_URL}/SoundStop.png`} alt="" width="50" onClick={() => pause()} id="hai" />
-      {/*画像をボタンにした 効果音も追加したよ～*/}
-      <img src={`${process.env.PUBLIC_URL}/start.png`} alt="" width="100" onClick={() => {ClickSound(); handleClick1()}} id="hai" /> 
-      <img src={`${process.env.PUBLIC_URL}/continue.png`} alt="" width="100" onClick={() => {ClickSound(); handleClick2()}} id="hai" />
+  {/* ⓵ウニの画像・説明 */}
+  <div style={{float: "left", margin: "29.5% 0 0 3%" , verticalAlign: "middle" , backgroundColor: ""}}> 
+    {/*ウニの画像 */}
+    <img src={ uniImage } alt="" height="140" style={{margin: ""}}/>
+    <img src={ uniInstruction }  Width="450"/>
+  </div>
+
+  {/* ⓶評価・所持金 */}
+  <div style={{float: "right", padding: "10px" , backgroundColor: ""}}>
+    {/* 評価の枠 */}
+    <div style={{display: "flex"}}>
+      <div style={
+        {margin: "" ,padding: "10px" ,
+        backgroundColor: "white" ,borderStyle: "solid" ,borderRadius: "8px" ,borderWidth: 'bold' ,borderColor: 'black', }
+      }>
+        <div style={{textAlign: "center"}}>
+          <h1>あなたが育てたウニは・・・</h1>
+          <img src={ uniChart }  width="350"  />
+          <h1 style={{ color: 'black', fontSize: 30, lineHeight: 0}}><span style={{color: "red", fontSize: 50 ,}} >{Uniprice()}</span>円</h1>
+        </div>
       </div>
-      
-      <br/>
     </div>
+    {/* 所持金 */}
+    <div style={{backgroundColor: "white" ,borderStyle: "solid" ,borderRadius: "8px" ,borderWidth: 'bold' ,borderColor: 'black', textAlign: "center"}}>
+      <p style={{ color: 'black', fontSize: 40 , lineHeight: 0 ,}}>所持金 {UnitotalPrice} 円</p>
+    </div>
+  </div>
+    
+      
+  {/* ⓷画面右下に表示するボタンたち */}
+  <div style={{float: "" , margin: "0 0 0 70%" ,backgroundColor: "",fontSize: "",}}>
+    {/*bgm再生・停止ボタン */}
+    <img src={`${process.env.PUBLIC_URL}/Sound (1).png`} alt="" width="50" onClick={() => playBgm()} id="hai" />
+    <img src={`${process.env.PUBLIC_URL}/SoundStop.png`} alt="" width="50" onClick={() => pause()} id="hai" />
+    {/*画像をボタンにした 効果音も追加したよ～*/}
+    <img src={`${process.env.PUBLIC_URL}/start.png`} alt="" width="100" onClick={() => {ClickSound(); handleClick1()}} id="hai" /> 
+    <img src={`${process.env.PUBLIC_URL}/continue.png`} alt="" width="100" onClick={() => {ClickSound(); handleClick2()}} id="hai" />
+  </div>
+
+</div>
   );
 }
