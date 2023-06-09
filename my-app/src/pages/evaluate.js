@@ -258,14 +258,14 @@ export const UniEvaluation = () => {
 }>
 
   {/* ⓵ウニの画像・説明 */}
-  <div style={{float: "left", margin: "29.5% 0 0 3%" , verticalAlign: "middle" , backgroundColor: ""}}> 
+  <div style={{float: "left", margin: "38% 0 0 3%" , verticalAlign: "middle" , backgroundColor: ""}}> 
     {/*ウニの画像 */}
     <img src={ uniImage } alt="" height="140" style={{margin: ""}}/>
     <img src={ uniInstruction }  Width="450"/>
   </div>
 
   {/* ⓶評価・所持金 */}
-  <div style={{float: "right", padding: "10px" , backgroundColor: "red", marginBottom: "30px"}}>
+  <div style={{float: "right", padding: "10px" , backgroundColor: "", marginBottom: "110px"}}>
     {/* 評価の枠 */}
     <div style={{display: "flex"}}>
       <div style={
@@ -275,7 +275,7 @@ export const UniEvaluation = () => {
         <div style={{textAlign: "center"}}>
           <h1>あなたが育てたウニは・・・</h1>
           <img src={ uniChart }  width="350"  />
-          <h1 style={{ color: 'black', fontSize: 30, lineHeight: 0}}><span style={{color: "red", fontSize: 50 ,}} >{Uniprice()}</span>円</h1>
+          <h1 style={{ color: 'black', fontSize: 30, lineHeight: 0}}><span style={{color: "", fontSize: 50 ,}} >{Uniprice()}</span>円</h1>
         </div>
       </div>
     </div>
@@ -287,7 +287,7 @@ export const UniEvaluation = () => {
     
       
   {/* ⓷画面右下に表示するボタンたち */}
-  <div style={{float: "" , margin: "0 0 0 70%" ,backgroundColor: "green",fontSize: "",}}>
+  <div style={{float: "" , margin: "0 0 0 70%" ,backgroundColor: "",fontSize: "",}}>
     {/*bgm再生・停止ボタン */}
     <img src={`${process.env.PUBLIC_URL}/Sound (1).png`} alt="" width="50" onClick={() => playBgm()} id="hai" />
     <img src={`${process.env.PUBLIC_URL}/SoundStop.png`} alt="" width="50" onClick={() => pause()} id="hai" />
