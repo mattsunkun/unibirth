@@ -20,7 +20,7 @@ export const UniEvaluation = () => {
       beauty: 3,
       image: `${process.env.PUBLIC_URL}/murasaki-uni.PNG`,
       instruction: `${process.env.PUBLIC_URL}/murasaki-uni_info.png`,
-      chart: `${process.env.PUBLIC_URL}/evaluate-chart-murasaki.png`
+      chart: `${process.env.PUBLIC_URL}/evaluate-chart-murasaki.PNG`
     },
     {
       type: '赤ウニ',
@@ -30,7 +30,7 @@ export const UniEvaluation = () => {
       beauty: 4,
       image: `${process.env.PUBLIC_URL}/aka-uni.PNG`,
       instruction: `${process.env.PUBLIC_URL}/aka-uni_info.png`,
-      chart: `${process.env.PUBLIC_URL}/evaluate-chart-aka.png`
+      chart: `${process.env.PUBLIC_URL}/evaluate-chart-aka.PNG`
     },
     {
       type: '北紫ウニ',
@@ -40,7 +40,7 @@ export const UniEvaluation = () => {
       beauty: 4,
       image: `${process.env.PUBLIC_URL}/kitamurasaki-uni.PNG`,
       instruction: `${process.env.PUBLIC_URL}/kitamurasaki-uni_info.png`,
-      chart: `${process.env.PUBLIC_URL}/evaluate-chart-kitamurasaki.png`
+      chart: `${process.env.PUBLIC_URL}/evaluate-chart-kitamurasaki.PNG`
     },
     {
       type: '馬糞ウニ',
@@ -50,7 +50,7 @@ export const UniEvaluation = () => {
       beauty: 4,
       image: `${process.env.PUBLIC_URL}/bafun-uni.PNG`,
       instruction: `${process.env.PUBLIC_URL}/bafun-uni_info.png`,
-      chart: `${process.env.PUBLIC_URL}/evaluate-chart-bafun.png`
+      chart: `${process.env.PUBLIC_URL}/evaluate-chart-bafun.PNG`
     },
     {
       type: '蝦夷馬糞ウニ',
@@ -60,7 +60,7 @@ export const UniEvaluation = () => {
       beauty: 5,
       image: `${process.env.PUBLIC_URL}/ezobafun-uni.PNG`,
       instruction: `${process.env.PUBLIC_URL}/ezobafun-uni_info.png`,
-      chart: `${process.env.PUBLIC_URL}/evaluate-chart-ezobafun.png`
+      chart: `${process.env.PUBLIC_URL}/evaluate-chart-ezobafun.PNG`
 
     },
     {
@@ -71,7 +71,7 @@ export const UniEvaluation = () => {
       beauty: 2,
       image: `${process.env.PUBLIC_URL}/chile-uni.PNG`,
       instruction: `${process.env.PUBLIC_URL}/chile-uni_info.png`,
-      chart: `${process.env.PUBLIC_URL}/evaluate-chart-chiri.png`
+      chart: `${process.env.PUBLIC_URL}/evaluate-chart-chiri.PNG`
     },
     {
       type: 'ガンガゼ',
@@ -81,7 +81,7 @@ export const UniEvaluation = () => {
       beauty: 1,
       image: `${process.env.PUBLIC_URL}/gangaze.PNG`,
       instruction: `${process.env.PUBLIC_URL}/gangaze_info.png`,
-      chart: `${process.env.PUBLIC_URL}/evaluate-chart-gangaze.png`
+      chart: `${process.env.PUBLIC_URL}/evaluate-chart-gangaze.PNG`
       
     },
     {
@@ -92,7 +92,7 @@ export const UniEvaluation = () => {
       beauty: 5,
       image: `${process.env.PUBLIC_URL}/ozo-uni.PNG`,
       instruction: `${process.env.PUBLIC_URL}/ozo-uni_info.png`,
-      chart: `${process.env.PUBLIC_URL}/evaluate-chart-ozouni.png`
+      chart: `${process.env.PUBLIC_URL}/evaluate-chart-ozouni.PNG`
     },
     {
       type: 'かがみもちうに',
@@ -102,7 +102,7 @@ export const UniEvaluation = () => {
       beauty: 2,
       image: `${process.env.PUBLIC_URL}/kagamimochi-uni.PNG`,
       instruction: `${process.env.PUBLIC_URL}/kagamimochi-uni_info.png`,
-      chart: `${process.env.PUBLIC_URL}/evaluate-chart-kagamimochi.png`
+      chart: `${process.env.PUBLIC_URL}/evaluate-chart-kagamimochi.PNG`
 
     },
     {
@@ -113,7 +113,7 @@ export const UniEvaluation = () => {
       beauty: 0,
       image: `${process.env.PUBLIC_URL}/wani.PNG`,
       instruction:`${process.env.PUBLIC_URL}/wani_info.png`,
-      chart: `${process.env.PUBLIC_URL}/evaluate-chart-wani.png`
+      chart: `${process.env.PUBLIC_URL}/evaluate-chart-wani.PNG`
     }
   ];
 
