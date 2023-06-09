@@ -245,25 +245,27 @@ export const UniEvaluation = () => {
 
     //↓表示されるところ
   return (
+    
 <div  className='priceEvaluate'
       style={
         { backgroundImage: `url(${backImagePath})`,
         backgroundPosition: "center" ,
         backgroundSize: "cover" ,
         backgroundRepeat: 'no-repeat' ,
-        width: "" ,
-        height: "" ,}
+        width: "100%" ,
+        height: "" ,
+        float: "" ,}
 }>
 
   {/* ⓵ウニの画像・説明 */}
-  <div style={{float: "left", margin: "29.5% 0 0 3%" , verticalAlign: "middle" , backgroundColor: ""}}> 
+  <div style={{float: "left", margin: "38% 0 0 3%" , verticalAlign: "middle" , backgroundColor: ""}}> 
     {/*ウニの画像 */}
     <img src={ uniImage } alt="" height="140" style={{margin: ""}}/>
     <img src={ uniInstruction }  Width="450"/>
   </div>
 
   {/* ⓶評価・所持金 */}
-  <div style={{float: "right", padding: "10px" , backgroundColor: ""}}>
+  <div style={{float: "right", padding: "10px" , backgroundColor: "", marginBottom: "110px"}}>
     {/* 評価の枠 */}
     <div style={{display: "flex"}}>
       <div style={
@@ -273,7 +275,7 @@ export const UniEvaluation = () => {
         <div style={{textAlign: "center"}}>
           <h1>あなたが育てたウニは・・・</h1>
           <img src={ uniChart }  width="350"  />
-          <h1 style={{ color: 'black', fontSize: 30, lineHeight: 0}}><span style={{color: "red", fontSize: 50 ,}} >{Uniprice()}</span>円</h1>
+          <h1 style={{ color: 'black', fontSize: 30, lineHeight: 0}}><span style={{color: "", fontSize: 50 ,}} >{Uniprice()}</span>円</h1>
         </div>
       </div>
     </div>
@@ -295,5 +297,7 @@ export const UniEvaluation = () => {
   </div>
 
 </div>
+    
+
   );
 }
