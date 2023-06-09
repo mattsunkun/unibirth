@@ -70,7 +70,7 @@ export const UniEvaluation = () => {
       taste: 2,
       beauty: 2,
       image: `${process.env.PUBLIC_URL}/chile-uni.PNG`,
-      instruction: `${process.env.PUBLIC_URL}/chile-uni.png`,
+      instruction: `${process.env.PUBLIC_URL}/chile-uni_info.png`,
       chart: `${process.env.PUBLIC_URL}/evaluate-chart-chiri.png`
     },
     {
@@ -79,7 +79,7 @@ export const UniEvaluation = () => {
       agility: 5,
       taste: 0,
       beauty: 1,
-      image: `${process.env.PUBLIC_URL}/gangaze(1).PNG`,
+      image: `${process.env.PUBLIC_URL}/gangaze.PNG`,
       instruction: `${process.env.PUBLIC_URL}/gangaze_info.png`,
       chart: `${process.env.PUBLIC_URL}/evaluate-chart-gangaze.png`
       
@@ -100,8 +100,8 @@ export const UniEvaluation = () => {
       agility: 5,
       taste: 1,
       beauty: 2,
-      image: `${process.env.PUBLIC_URL}/kagamimpchi-uni.PNG`,
-      instruction: `${process.env.PUBLIC_URL}/kagamimpchi-uni_info.png`,
+      image: `${process.env.PUBLIC_URL}/kagamimochi-uni.PNG`,
+      instruction: `${process.env.PUBLIC_URL}/kagamimochi-uni_info.png`,
       chart: `${process.env.PUBLIC_URL}/evaluate-chart-kagamimochi.png`
 
     },
