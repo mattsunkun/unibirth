@@ -25,7 +25,7 @@ let uri;
   }
     // 紫うに
     if(
-      (dictFood.cabbageNamePriceAmount[2] <= 1)&&(dictFood.tomatoNamePriceAmount[2] <= 1)
+      (dictFood.cabbageNamePriceAmount[2] == 1)&&(dictFood.tomatoNamePriceAmount[2] == 1)
       )
     {
       console.warn("hello")
@@ -36,7 +36,7 @@ let uri;
     }
     // チリうに
     else if(
-      (dictFood.tomatoNamePriceAmount[2] <= 2)&&(dictFood.seaWeedNamePriceAmount[2] <= 1)
+      (dictFood.tomatoNamePriceAmount[2] == 2)&&(dictFood.seaWeedNamePriceAmount[2] <= 1)
       )
     {
       dictStatus.intSize = 1
@@ -46,7 +46,7 @@ let uri;
     }
     // 北紫うに
     else if(
-      (dictFood.cabbageNamePriceAmount[2] >= 4)||(dictFood.seaWeedNamePriceAmount[2] >= 3)
+      (dictFood.cabbageNamePriceAmount[2] == 3)||(dictFood.seaWeedNamePriceAmount[2] == 3)
     )
     {
       dictStatus.intSize = 4
@@ -56,7 +56,7 @@ let uri;
     }
     // ガンガゼ
     else if(
-     (dictFood.cabbageNamePriceAmount[2] == 1)||(dictFood.tomatoNamePriceAmount[2] == 1)
+     (dictFood.cabbageNamePriceAmount[2] <= 1)||(dictFood.tomatoNamePriceAmount[2] == 0)
     )
     {
       dictStatus.intSize = 1
