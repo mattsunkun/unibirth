@@ -294,7 +294,7 @@ const intBottonSize = 80;
       <img src={`${process.env.PUBLIC_URL}/IMG_0204.PNG`} onClick={handleClick} id="hai" width="300"/>
       </div>
       
-      
+      <p>　</p>
       
       </div>
     </div>
