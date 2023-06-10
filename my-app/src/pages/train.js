@@ -230,14 +230,17 @@ const intBottonSize = 80;
 <div style={{float: "right"}}>
       <img src={`${process.env.PUBLIC_URL}/items6.png`} width="350" style = {{ paddingBottom:30, flexDirection: "row"}}/>
       </div>
- 
-      <div  style={{float: "left"}}>
-      <div>
-        <div id="money" style = {{fontSize: 50, display: "inline-block", paddingTop: "", paddingBottom:"", color:"black"}}>所持金:  {haveMoney} 円</div>
+
+      <div id="money" style = {{fontSize: 50, display: "inline-block", paddingTop: "", paddingBottom:"", color:"black"}}>所持金:  {haveMoney} 円</div>
       <h1 style={{flexDirection: "column", color:"black"}}> ウニを育成しよう</h1>
       <h2 style = {{fontSize: 40, color: '#FF570D', paddingLeft: "", paddingBottom: "", }}>エサ</h2>
       
-      <div style={{width: "" , display: "", alignContent:"stretch"}}>
+      {/* ボタン隊 */}
+      <div  style={{float: "left"}}>
+      <div>
+        
+      
+      <div style={{backgroundColor: "" , width: "750px" , display: "inline"}}>
       
       キャベツ：
       <label style = {{fontSize: 30, display: "flex"}}>
@@ -294,9 +297,10 @@ const intBottonSize = 80;
       <img src={`${process.env.PUBLIC_URL}/IMG_0204.PNG`} onClick={handleClick} id="hai" width="300"/>
       </div>
       
-      <p>　</p>
+      
       
       </div>
+      <p style={{marginTop: "1000px"}}>　</p>
     </div>
   );
 };
