@@ -25,7 +25,7 @@ let uri;
   }
     // 紫うに
     if(
-      (dictFood.cabbageNamePriceAmount[2] == 1)&&(dictFood.tomatoNamePriceAmount[2] == 1)
+      (dictFood.cabbageNamePriceAmount[2] <= 1)||(dictFood.tomatoNamePriceAmount[2] <= 1)
       )
     {
       console.warn("hello")
@@ -36,7 +36,7 @@ let uri;
     }
     // チリうに
     else if(
-      (dictFood.tomatoNamePriceAmount[2] == 2)&&(dictFood.seaWeedNamePriceAmount[2] <= 1)
+      (dictFood.tomatoNamePriceAmount[2] <= 2)||(dictFood.seaWeedNamePriceAmount[2] <= 2)
       )
     {
       dictStatus.intSize = 1
@@ -46,7 +46,7 @@ let uri;
     }
     // 北紫うに
     else if(
-      (dictFood.cabbageNamePriceAmount[2] == 3)||(dictFood.seaWeedNamePriceAmount[2] == 3)
+      (dictFood.cabbageNamePriceAmount[2] <= 3)||(dictFood.seaWeedNamePriceAmount[2] <= 3)
     )
     {
       dictStatus.intSize = 4
@@ -56,7 +56,7 @@ let uri;
     }
     // ガンガゼ
     else if(
-     (dictFood.cabbageNamePriceAmount[2] <= 1)&&(dictFood.tomatoNamePriceAmount[2] == 0)
+     (dictFood.cabbageNamePriceAmount[2] <= 4)||(dictFood.tomatoNamePriceAmount[2] <= 4)
     )
     {
       dictStatus.intSize = 1
@@ -66,7 +66,7 @@ let uri;
     }
     // アカウに
     else if(
-     (dictFood.tomatoNamePriceAmount[2] == 3)&&((dictFood.waterMelonNamePriceAmount[2] == 3))
+     (dictFood.tomatoNamePriceAmount[2] <= 5)||((dictFood.waterMelonNamePriceAmount[2] <= 4))
     )
     {
       dictStatus.intSize = 4
@@ -76,17 +76,17 @@ let uri;
     }
     // 馬糞
     else if(
-      (dictFood.waterMelonNamePriceAmount[2] == 4)||(dictFood.seaWeedNamePriceAmount[2] == 4)
+      (dictFood.waterMelonNamePriceAmount[2] <= 5)||(dictFood.seaWeedNamePriceAmount[2] <= 4)
     )
     {
       dictStatus.intSize = 4
       dictStatus.intAgility = 2
-      dictStatus.intTaste = 4
+      dictStatus.intTaste = 5
       dictStatus.intBeauty = 4
     }
     // 蝦夷ばふん
     else if(
-      ((dictFood.waterMelonNamePriceAmount[2] >= 4)&&(dictFood.seaWeedNamePriceAmount[2] >= 4))||(dictFood.garigariNamePriceAmount[2] ==4)
+      ((dictFood.waterMelonNamePriceAmount[2] <= 6)||(dictFood.seaWeedNamePriceAmount[2] <= 5))||(dictFood.garigariNamePriceAmount[2] <= 4)
     )
     {
       dictStatus.intSize = 5
@@ -96,7 +96,7 @@ let uri;
     }
     // お雑煮
     else if(
-      (dictFood.seaWeedNamePriceAmount[2] == 5)&&(dictFood.riceNamePriceAmount[2] >= 3)
+      (dictFood.seaWeedNamePriceAmount[2] <= 6)||(dictFood.riceNamePriceAmount[2] <= 4)
     )
     {
       dictStatus.intSize = 5
@@ -106,7 +106,7 @@ let uri;
     }
     // 鏡餅うに
     else if(
-      (dictFood.seaWeedNamePriceAmount[2] == 4)&&(dictFood.riceNamePriceAmount[2] <= 3)
+      (dictFood.seaWeedNamePriceAmount[2] >= 7)||(dictFood.riceNamePriceAmount[2] >= 5)
     )
     {
       dictStatus.intSize = 1
