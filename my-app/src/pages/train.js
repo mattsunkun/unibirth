@@ -66,7 +66,7 @@ let uri;
     }
     // アカウに
     else if(
-     ((dictFood.tomatoNamePriceAmount[2] == 3)||(dictFood.tomatoNamePriceAmount[2] == 4))&&((dictFood.waterMelonNamePriceAmount[2] == 3)||(dictFood.waterMelonNamePriceAmount[2] == 4))
+     (dictFood.tomatoNamePriceAmount[2] == 3)&&((dictFood.waterMelonNamePriceAmount[2] == 3))
     )
     {
       dictStatus.intSize = 4
