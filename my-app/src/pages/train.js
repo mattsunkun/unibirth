@@ -56,7 +56,7 @@ let uri;
     }
     // ガンガゼ
     else if(
-     (dictFood.cabbageNamePriceAmount[2] <= 1)||(dictFood.tomatoNamePriceAmount[2] == 0)
+     (dictFood.cabbageNamePriceAmount[2] <= 1)&&(dictFood.tomatoNamePriceAmount[2] == 0)
     )
     {
       dictStatus.intSize = 1
@@ -71,7 +71,7 @@ let uri;
     {
       dictStatus.intSize = 4
       dictStatus.intAgility = 2
-      dictStatus.intTaste = 5
+      dictStatus.intTaste = 4
       dictStatus.intBeauty = 4
     }
     // 馬糞
