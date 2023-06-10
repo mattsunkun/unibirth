@@ -46,7 +46,7 @@ export const UniEvaluation = () => {
       type: '馬糞ウニ',
       size: 4,
       agility: 2,
-      taste: 4,
+      taste: 5,
       beauty: 4,
       image: `${process.env.PUBLIC_URL}/bafun-uni.PNG`,
       instruction: `${process.env.PUBLIC_URL}/bafun-uni_info.png`,
