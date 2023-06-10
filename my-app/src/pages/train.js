@@ -218,7 +218,7 @@ let uri;
 
 
 const intImageSize = 60;
-const intBottonSize = 80;
+const intBottonSize = 70;
 
  //表示するところ
   return (
@@ -227,22 +227,21 @@ const intBottonSize = 80;
       { backgroundImage: `url(${backImagePath})`,backgroundRepeat: "no-repeat" ,paddingTop: 30}
      }>
 
-<div style={{float: "right"}}>
-      <img src={`${process.env.PUBLIC_URL}/items6.png`} width="350" style = {{ paddingBottom:30, flexDirection: "row"}}/>
-      </div>
+  <div style={{float:"right",marginRight:30}}>
+      <img src={`${process.env.PUBLIC_URL}/items6.png`} width="310" style = {{ paddingBottom:30, flexDirection: "row"}}/>
+  </div>
 
-      <div id="money" style = {{fontSize: 50, display: "inline-block", paddingTop: "", paddingBottom:"", color:"black"}}>所持金:  {haveMoney} 円</div>
-      <h1 style={{flexDirection: "column", color:"black"}}> ウニを育成しよう</h1>
-      <h2 style = {{fontSize: 40, color: '#FF570D', paddingLeft: "", paddingBottom: "", }}>エサ</h2>
+  <div id="money" style = {{fontSize: 50, display: "inline-block", paddingTop: "", paddingBottom:"", color:"white"}}>所持金:  {haveMoney} 円</div>
+      <h1 style={{flexDirection: "column", color:"white"}}> ウニを育成しよう</h1>
       
       {/* ボタン隊 */}
-      <div  style={{float: "left"}}>
+    <div  style={{float: "left"}}>
       <div>
         
       
-      <div style={{backgroundColor: "" , width: "750px" , display: "inline"}}>
+      <div style={{ width: "870px" , display: "flex",alignItems:"flex-start",flexWrap:"wrap"}}>
       
-      キャベツ：
+      キャベツ　　
       <label style = {{fontSize: 30, display: "flex"}}>
         <img src={`${process.env.PUBLIC_URL}/cabbage.PNG`} width={intImageSize} height={intImageSize} />
         <div id={dictFood.cabbageNamePriceAmount[0]} style={{fontSize: 50, paddingLeft: 20}} >0</div>
@@ -250,7 +249,7 @@ const intBottonSize = 80;
         <img src={`${process.env.PUBLIC_URL}/plus-removebg-preview (1).png`} onClick={() => buyIt(dictFood.cabbageNamePriceAmount, 1)} height = {intBottonSize}/>
       </label>
       <br />
-      トマト：
+      トマト　　
       <label style = {{fontSize: 30,display: "flex"}}>
         <img src={`${process.env.PUBLIC_URL}/tomato.PNG`} width={intImageSize} height={intImageSize}/>
         <div id={dictFood.tomatoNamePriceAmount[0]} style={{fontSize: 50, paddingLeft: 20}}>0</div>
@@ -258,7 +257,7 @@ const intBottonSize = 80;
         <img src={`${process.env.PUBLIC_URL}/plus-removebg-preview (1).png`} onClick={() =>buyIt(dictFood.tomatoNamePriceAmount, 1)}  height = {intBottonSize}/>
       </label>
       <br />
-      スイカ：
+      スイカ　　
       <label style = {{fontSize: 30,display: "flex"}}>
         <img src={`${process.env.PUBLIC_URL}/watermelon.PNG`} width={intImageSize} height={intImageSize}/>
         <div id={dictFood.waterMelonNamePriceAmount[0]} style={{fontSize: 50, paddingLeft: 20}}>0</div>
@@ -266,7 +265,7 @@ const intBottonSize = 80;
         <img src={`${process.env.PUBLIC_URL}/plus-removebg-preview (1).png`} onClick={() =>buyIt(dictFood.waterMelonNamePriceAmount, 1)}  height = {intBottonSize}/>
       </label>
       <br />
-      昆布：
+      昆布　　　
       <label style = {{fontSize: 30,display: "flex"}}>
         <img src={`${process.env.PUBLIC_URL}/kombu.PNG`} width={intImageSize} height={intImageSize}/>
         <div id={dictFood.seaWeedNamePriceAmount[0]} style={{fontSize: 50, paddingLeft: 20}}>0</div>
@@ -275,15 +274,15 @@ const intBottonSize = 80;
       </label>
       <br />
       
-      米：
-      <label style = {{fontSize: 30,display: "flex"}}>
+      米　　　　
+            <label style = {{fontSize: 30,display: "flex"}}>
         <img src={`${process.env.PUBLIC_URL}/kome.PNG`} width={intImageSize} height={intImageSize}/>
         <div id={dictFood.riceNamePriceAmount[0]} style={{fontSize: 50, paddingLeft: 20}}>0</div>
         <img src={`${process.env.PUBLIC_URL}/minus-removebg-preview (1).png`} onClick={() =>buyIt(dictFood.riceNamePriceAmount, -1)} height = {intBottonSize}/>
         <img src={`${process.env.PUBLIC_URL}/plus-removebg-preview (1).png`} onClick={() =>buyIt(dictFood.riceNamePriceAmount, 1)}  height = {intBottonSize}/>
       </label>
       <br />
-      ガリガリ君：
+      ガリガリ君
       <label style = {{fontSize: 30,display: "flex"}}>
         <img src={`${process.env.PUBLIC_URL}/garigarikun.PNG`} width={intImageSize} height={intImageSize}/>
         <div id={dictFood.garigariNamePriceAmount[0]} style={{fontSize: 50, paddingLeft: 20}}>0</div>
