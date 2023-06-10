@@ -192,6 +192,11 @@ export const UniEvaluation = () => {
         uniInstruction = grownUni.instruction;
         uniChart = grownUni.chart;
         break;
+      case '馬糞ウニ':
+        uniImage = grownUni.image;
+        uniInstruction = grownUni.instruction;
+        uniChart = grownUni.chart;
+        break;  
       case '蝦夷馬糞ウニ':
         uniImage = grownUni.image;
         uniInstruction = grownUni.instruction;

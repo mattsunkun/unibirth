@@ -1,13 +1,15 @@
 import {NavLink,useLocation} from "react-router-dom";
 import React, { useState, useEffect, useCallback, memo } from 'react';
 //import React, { useEffect, useCallback, memo} from "react";
-
+import useSound from 'use-sound';
 export const Train = () => {
   //ページを変えても値を受け渡すやつ
   const search = useLocation().search;
   const query2 = new URLSearchParams(search)
   
-  
+//BGM設定
+const [playBgm,{pause}] = useSound(`${process.env.PUBLIC_URL}/MusMus-BGM-033.mp3`)
+
 
 //所持金
 let haveMoney = Number(query2.get('money'));
@@ -81,7 +83,7 @@ let uri;
     {
       dictStatus.intSize = 4
       dictStatus.intAgility = 2
-      dictStatus.intTaste = 4
+      dictStatus.intTaste = 5
       dictStatus.intBeauty = 4
     }
     // 蝦夷ばふん
@@ -106,7 +108,7 @@ let uri;
     }
     // 鏡餅うに
     else if(
-      (dictFood.seaWeedNamePriceAmount[2] == 4)&&(dictFood.riceNamePriceAmount[2] <= 3)
+      (dictFood.seaWeedNamePriceAmount[2] >= 4)&&(dictFood.riceNamePriceAmount[2] <= 3)
     )
     {
       dictStatus.intSize = 1
@@ -232,6 +234,8 @@ const intBottonSize = 70;
   </div>
 
   <div id="money" style = {{fontSize: 50, display: "inline-block", paddingTop: "", paddingBottom:"", color:"white"}}>所持金:  {haveMoney} 円</div>
+  <img src={`${process.env.PUBLIC_URL}/Sound (1).png`} alt="" width="50" onClick={() => playBgm()} id="hai" />
+      <img src={`${process.env.PUBLIC_URL}/SoundStop.png`} alt="" width="50" onClick={() => pause()} id="hai" />
       <h1 style={{flexDirection: "column", color:"white"}}> ウニを育成しよう</h1>
       
       {/* ボタン隊 */}
