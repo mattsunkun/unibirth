@@ -106,7 +106,7 @@ let uri;
     }
     // 鏡餅うに
     else if(
-      (dictFood.seaWeedNamePriceAmount[2] >= 7)||(dictFood.riceNamePriceAmount[2] >= 5)
+      (dictFood.seaWeedNamePriceAmount[2] <= 7)||(dictFood.riceNamePriceAmount[2] <= 5)
     )
     {
       dictStatus.intSize = 1
